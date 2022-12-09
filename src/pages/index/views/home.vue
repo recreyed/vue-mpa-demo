@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <img src="~@/images/logo.png">
+    <button @click="open">toast</button>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -15,6 +16,9 @@ export default {
     HelloWorld
   },
   methods: {
+    open(){
+      this.$toast.show('嘿嘿嘿',1000)
+    }
   },
 }
 </script>
