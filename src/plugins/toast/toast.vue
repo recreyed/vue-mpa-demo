@@ -1,7 +1,6 @@
 <template>
   <div class="toast" v-show="isShow">{{massage}}</div>
 </template>
-
 <script>
 export default {
   name: "Toast",
@@ -16,7 +15,6 @@ export default {
       console.log('----')
       this.massage = msg
       this.isShow = true
-
       setTimeout(()=>{
         this.isShow = false
       },durations)
@@ -25,7 +23,6 @@ export default {
 
 }
 </script>
-
 <style scoped>
 .toast {
   position: fixed;
