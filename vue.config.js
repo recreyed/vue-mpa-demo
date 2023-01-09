@@ -55,10 +55,15 @@ module.exports = {
 
         // string | Object 代理设置
         proxy: {
-            '/repos': {
-                target: 'https://api.github.com',
-                changeOrigin: true
-                // pathRewrite: {'^/api': ''}
+            '/noauth': {
+                target: 'https://api.backblazeb2.com/',
+                changeOrigin: true,
+                pathRewrite: {'^/noauth': ''}
+            },
+            '/auth': {
+                target: 'https://api004.backblazeb2.com/',
+                changeOrigin: true,
+                pathRewrite: {'^/auth': ''}
             }
         },
     }
